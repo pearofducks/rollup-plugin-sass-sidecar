@@ -7,7 +7,6 @@ import { writeFileSync, existsSync, mkdirSync } from 'fs'
 
 export default (opts = {}) => {
   let css = ''
-  let watching = []
   let filename = ''
   return {
     name: 'sidecar',
@@ -15,12 +14,7 @@ export default (opts = {}) => {
       if (!filename) filename = basename(file, '.scss')
       const rendered = sass.renderSync({ file })
       const { includedFiles } = rendered.stats
-      includedFiles.forEach(f => {
-        if (!watching.includes(f)) {
-          this.addWatchFile(f)
-          watching.push(f)
-        }
-      })
+      includedFiles.forEach(this.addWatchFile)
       const rawCSS = rendered.css.toString()
       css = await postcss([autoprefixer, cssnano]).process(rawCSS, { from: file })
       return 'export default ""'
