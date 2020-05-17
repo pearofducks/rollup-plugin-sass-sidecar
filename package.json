@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-sass-sidecar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a plugin to transform SASS to CSS without involving a JS import",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
