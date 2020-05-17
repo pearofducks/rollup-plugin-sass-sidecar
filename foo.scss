@@ -1,0 +1,7 @@
+@import './bar';
+$my-var: red;
+body {
+  background-color: blue;
+  color: $my-var;
+  border-color: $my-var;
+}

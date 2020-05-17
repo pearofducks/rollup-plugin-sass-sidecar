@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "watch": "rollup -w -c"
+  },
+  "dependencies": {
+    "postcss": "^7.0.30",
+    "rollup": "^2.10.2",
+    "sass": "^1.26.5"
+  }
+}
