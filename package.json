@@ -1,8 +1,18 @@
 {
+  "name": "rollup-plugin-sass-sidecar",
+  "version": "1.0.0",
+  "description": "a plugin to transform SASS to CSS without involving a JS import",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "author": "Dave Honneffer <pearofducks@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "watch": "rollup -w -c"
+    "watch": "cd dev && rollup -w -c",
+    "build": "rollup -c"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
     "postcss": "^7.0.30",
     "rollup": "^2.10.2",
     "sass": "^1.26.5"

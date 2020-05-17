@@ -1,14 +1,9 @@
-import sidecar from './index'
+import pkg from './package.json'
 
-export default [
-  {
-  input: './test.js',
-  output: { file: './test.min.js', format: 'es' },
-  watch: { clearScreen: false }
-},
-{
-  input: './sass/foo.scss',
-  plugins: [sidecar()],
-  output: { dir: './dist' }
+export default {
+  input: './index.js',
+  output: [
+    { file: pkg.main, format: 'cjs' },
+    { file: pkg.module, format: 'esm' }
+  ]
 }
-]
