@@ -4,13 +4,10 @@ export default [
   {
   input: './test.js',
   output: { file: './test.min.js', format: 'es' },
-  plugins: [
-    // sidecar()
-  ],
   watch: { clearScreen: false }
 },
 {
-  input: './foo.scss',
+  input: './sass/foo.scss',
   plugins: [sidecar()],
   output: { dir: './dist' }
 }
