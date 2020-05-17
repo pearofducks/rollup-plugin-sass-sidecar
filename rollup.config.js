@@ -5,5 +5,6 @@ export default {
   output: [
     { file: pkg.main, format: 'cjs' },
     { file: pkg.module, format: 'esm' }
-  ]
+  ],
+  external: ['sass', 'postcss', 'cssnano', 'autoprefixer', 'fs', 'path']
 }
