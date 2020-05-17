@@ -6,6 +6,9 @@
   "module": "lib/index.esm.js",
   "author": "Dave Honneffer <pearofducks@gmail.com>",
   "license": "MIT",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "watch": "cd dev && rollup -w -c",
     "build": "rollup -c"
