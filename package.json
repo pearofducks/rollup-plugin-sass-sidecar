@@ -11,7 +11,9 @@
   ],
   "scripts": {
     "watch": "cd dev && rollup -w -c",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "version": "npm run build",
+    "postversion": "npm publish && git push --follow-tags"
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
