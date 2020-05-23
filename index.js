@@ -23,7 +23,8 @@ export default (opts = {}) => {
       if (!options.dir) return this.error("output.dir must be specified for sidecar")
       Object.keys(bundle).forEach(filename => delete bundle[filename])
       if (!existsSync(options.dir)) mkdirSync(options.dir)
-      writeFileSync(join(options.dir, filename + '.css'), css)
+      const output = typeof css === 'object' ? css.css : css
+      writeFileSync(join(options.dir, filename + '.css'), output)
       return null
     }
   }
